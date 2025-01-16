@@ -11,7 +11,7 @@
 
 <div id="app" class="container mt-5">
     <h1 class="text-center">Управление Заметками</h1>
-    <form @submit.prevent="addNote" class="note-form">
+    <form @submit.prevent="Edit ? upload() : addNote()" class="note-form">
         <div class="mb-3">
             <label for="noteTitle" class="form-label">Название Заметки:</label>
             <input type="text" id="noteTitle" class="form-control" v-model="newNote.title" required>
@@ -47,6 +47,7 @@
             <label class="form-check-label" for="importantCheckbox">Важно</label>
         </div>
         <button type="submit" class="btn btn-primary btn-custom">Добавить Заметку</button>
+		<button type="button" class="btn btn-primary btn-custom" @click="clearMemory">Очистить память</button>
     </form>
 
     <div class="note-list">
@@ -56,6 +57,7 @@
                 <h5>{{ note.title }} <span class="badge bg-info">{{ note.category }}</span></h5>
                 <p>{{ note.content }}</p>
                 <small class="text-muted">Статус: {{ note.status }} | Важно: {{ note.important ? 'Да' : 'Нет' }}</small>
+				<button class="btn btn-custom btn-sm" @click="edit(note)">Edit</button>
                 <button class="btn btn-danger btn-sm float-end" @click="removeNote(index)">Удалить</button>
             </li>
         </ul>
