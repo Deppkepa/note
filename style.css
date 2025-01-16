@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+}
+.note-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.note-form .form-label {
+    font-weight: bold;
+}
+.note-list {
+    margin-top: 2rem;
+}
+.note-list .list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+.note-list .list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.badge {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-custom {
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
